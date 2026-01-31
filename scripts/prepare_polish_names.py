@@ -8,7 +8,7 @@ def load_names(path: Path) -> list[str]:
     if not path.exists():
         raise SystemExit(f"Missing input file: {path}")
     lines = path.read_text(encoding="utf-8").splitlines()
-    return [line.strip() for line in lines if line.strip()]
+    return [line.strip().lower() for line in lines if line.strip()]
 
 
 def main() -> None:

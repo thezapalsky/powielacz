@@ -1,2 +1,13 @@
-data/
+data/names
+data/poem
 .DS_Store
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ty_cache/
+.coverage
+htmlcov/
+.venv/
+.ipynb_checkpoints/
