@@ -27,6 +27,31 @@ miarizeuradawellelusłolierusłatymina.
 maryliudwidrelinemanda.
 ```
 
+### trigram (MLP, 12K params)
+
+```
+robernard.
+lrosławoj.
+wita.
+eufenwktryacieolima.
+jarosław.
+dionifacy.
+kyrsżgna.
+toma.
+zuza.
+kunela.
+wiols.
+bogdaleria.
+karołhlasta.
+wena.
+grzej.
+irmgard.
+zdy.
+dionarda.
+sylwebastan.
+radela.
+```
+
 ## development
 
 all commands use `uv run` (no manual venv activation).
@@ -61,3 +86,8 @@ uv run ty check src/
 
 - https://www.youtube.com/watch?v=PaCmpygFfXo&list=WL&index=3
 - https://www.kaggle.com/datasets/djablo/list-of-polish-first-and-last-names?resource=download
+- https://www.youtube.com/watch?v=TCH_1BHY58I&list=WL&index=1&t=1s
+
+--
+
+- https://youtu.be/P6sfmUTpUmc?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ
