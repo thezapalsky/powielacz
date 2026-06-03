@@ -9,6 +9,7 @@ project: makemore with polish dataset (notion concept/ PRD)
 
 - revisit Karpathy’s makemore and/or GPT-2 series
 - focus, make notes, replicate code along with the video
+- build a better Polish names generator first, then use Pan Tadeusz to generate more verse
 - commit progress to github
 
 ### Reward

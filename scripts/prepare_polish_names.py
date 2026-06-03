@@ -13,7 +13,7 @@ def load_names(path: Path) -> list[str]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Merge Polish female and male names and shuffle into data/names.txt."
+        description="Merge Polish first names and optional surnames, then shuffle into a training dataset."
     )
     parser.add_argument(
         "--female-file",
@@ -28,9 +28,20 @@ def main() -> None:
         help="Path to male first names file.",
     )
     parser.add_argument(
+        "--surname-file",
+        type=Path,
+        default=Path("data/names/polish_surnames.txt"),
+        help="Path to Polish surnames file.",
+    )
+    parser.add_argument(
+        "--include-surnames",
+        action="store_true",
+        help="Include Polish surnames in the merged dataset.",
+    )
+    parser.add_argument(
         "--output-file",
         type=Path,
-        default=Path("data/names.txt"),
+        default=Path("data/names/polish_names.txt"),
         help="Output file path.",
     )
     parser.add_argument(
@@ -42,6 +53,8 @@ def main() -> None:
     args = parser.parse_args()
 
     names = load_names(args.female_file) + load_names(args.male_file)
+    if args.include_surnames:
+        names += load_names(args.surname_file)
     rng = random.Random(args.seed)
     rng.shuffle(names)
 

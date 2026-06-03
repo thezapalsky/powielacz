@@ -52,6 +52,37 @@ sylwebastan.
 radela.
 ```
 
+## transformer (6-layer, 8-head, 128-d)
+
+Novel names generated with `makemore` from `data/names/polish_first_names.txt`:
+
+```
+parceli
+bronika
+artus
+krysbin
+izabelgna
+riana
+h
+zazia
+stewonia
+walentyn
+puliuspiusz
+kuron
+izaspim
+krysp
+ambroh
+nerafin
+nat
+epolinera
+zenonia
+rozalś
+florenty
+jarand
+mo
+```
+
+
 ## development
 
 all commands use `uv run` (no manual venv activation).
