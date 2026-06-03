@@ -52,6 +52,62 @@ sylwebastan.
 radela.
 ```
 
+### gru (4-layer, 64-d, 29K params)
+
+Novel names generated with `makemore` from `data/names/polish_first_names.txt`:
+
+```
+wigtoga
+marcikt
+banna
+gusława
+ferginim
+bazbit
+matatara
+andyla
+kargarz
+joreno
+mobrust
+jugetna
+jlina
+angiestyna
+olta
+leonsa
+ronimeo
+fwiłsz
+bosławur
+berysz
+kaweleta
+judzekty
+buga
+becjanora
+izicen
+barda
+klana
+baris
+winizardis
+jawolt
+ewomuek
+celiusz
+wtannatra
+emkandydta
+murta
+bomindzneta
+lityna
+marzery
+tomar
+ertand
+adonata
+semanda
+jugentyna
+dina
+fapolia
+ludmałd
+frybotyna
+loniga
+agteno
+```
+
 ### transformer (6-layer, 8-head, 128-d, 1.2M params)
 
 Novel names generated with `makemore` from `data/names/polish_first_names.txt`:
