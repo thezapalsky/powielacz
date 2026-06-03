@@ -138,6 +138,43 @@ jarand
 mo
 ```
 
+## Pan Tadeusz experiment
+
+The experiment trains a character-level language model on the Polish national epic poem "Pan Tadeusz" by Adam Mickiewicz.
+
+The model is a small transformer trained on the text of the poem, including punctuation and line breaks.
+
+At this scale, the model does not generate coherent literary text, but it already learns Polish-looking character patterns, punctuation, line breaks, and pseudo-archaic rhythm.
+
+## params
+
+```bash
+uv run python makemore/makemore.py \
+  -i data/poem/pan_tadeusz_clean.txt \
+  -o out/pan-tadeusz-small \
+  --type transformer \
+  --n-layer 2 \
+  --n-head 4 \
+  --n-embd 64 \
+  --batch-size 64 \
+  --learning-rate 5e-4 \
+  --max-steps 10000
+```
+
+## sample
+
+```
+Kto zorawania, rozwany zrokoszą chcestą
+*Śwam głowu, sadługa rzecz dymusze zaloska,
+Fonko piseluje i schę laszk werzął dlamę,
+Przerwała? Porwu; nitry uletki co grubka miru zada,
+Lub teraz jednym gniko, ci ubisłaniej zanach,
+Wypók Wojedarz cień nierzczyny swę ust oto,
+Jako nim; po sowej na klejszcze Sercze;
+Prawny zabrzyzna: żeśmy przekł na ołów.
+Z zającym zwionie były i czekają dna —
+Gsię ręzywała mował moa cofi i zaje
+```
 
 ## development
 
