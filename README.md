@@ -52,7 +52,7 @@ sylwebastan.
 radela.
 ```
 
-## transformer (6-layer, 8-head, 128-d)
+### transformer (6-layer, 8-head, 128-d, 1.2M params)
 
 Novel names generated with `makemore` from `data/names/polish_first_names.txt`:
 
