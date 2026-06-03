@@ -176,6 +176,62 @@ Z zającym zwionie były i czekają dna —
 Gsię ręzywała mował moa cofi i zaje
 ```
 
+- initial run was done on CPU at around `940 ms/step`
+- continuing with `--device mps` reduced step time to around `380-400 ms/step`, but it crashed after sampling
+
+```
+## 20k steps checkpoint
+
+```
+
+uv run python makemore/makemore.py \
+  -i data/poem/pan_tadeusz_clean.txt \
+  -o out/pan-tadeusz-small \
+  --type transformer \
+  --n-layer 2 \
+  --n-head 4 \
+  --n-embd 64 \
+  --batch-size 64 \
+  --learning-rate 1e-4 \
+  --max-steps 10000 \
+  --device cpu \
+  --resume
+
+```
+
+## 20k sample
+
+```
+
+Trzecimen poburze światnym przyto bedwał,
+*Tane ale obrzęciem, wawodził hancieszej oboga
+Zakończych o dża trafic obuny nieśniote.
+Pobiegał, Bu niecno głowym zna ogórze;
+Tadeusz, to głowę w caremnię prawda zgóry;
+Posięcza na brojana, kiego do mszał duche,
+Ten sto kularki gwiaz przelę do milczenie,
+Stał w ksiądz golno, od inneujszej niegoszą wdtem!»
+Od w tylkojąc się nie małą ogąsku no lewa,
+Jak z przeciertwo cichennymi nie prochodzę miecie;
+Robak plubmi jesta, jakbel chwili, poknie rami.
+Sędzia z tylko z okodzicej pod duszejkę
+Zaś gonaczniem domu skaczy mczaselona
+Przeszły obwiem zimiał pecentów custa słowo:
+To wetyli w takitym Kuszkącą gospotana
+Ale żelaź odwistawił na poczając wiary niów,
+Chybiliżycia cór z minkę, państwa, onu dmaski:
+Machmi ptaczony witarz na zwłasnął i księżem
+Ciągna się miała grzmieniał gosponie.
+Mdu strasz na ty pańską Wojskich z pańskie zabli;
+Ja, panny obudu tamtych pioruszę przemiecha;
+I żebyli i weskali w dosta mowania,
+I wpadłszym możny: «To obraz dziwnie zbóg!»
+Pozaję zamie, strasło leci nie uzdzina,
+I wojsk rzecz imentu, trwawią ukras hwiaty».
+
+```
+
+
 ## development
 
 all commands use `uv run` (no manual venv activation).
@@ -208,10 +264,10 @@ uv run ty check src/
 
 ## sources
 
-- https://www.youtube.com/watch?v=PaCmpygFfXo&list=WL&index=3
-- https://www.kaggle.com/datasets/djablo/list-of-polish-first-and-last-names?resource=download
-- https://www.youtube.com/watch?v=TCH_1BHY58I&list=WL&index=1&t=1s
+- <https://www.youtube.com/watch?v=PaCmpygFfXo&list=WL&index=3>
+- <https://www.kaggle.com/datasets/djablo/list-of-polish-first-and-last-names?resource=download>
+- <https://www.youtube.com/watch?v=TCH_1BHY58I&list=WL&index=1&t=1s>
 
 --
 
-- https://youtu.be/P6sfmUTpUmc?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ
+- <https://youtu.be/P6sfmUTpUmc?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ>
