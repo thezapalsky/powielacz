@@ -179,11 +179,9 @@ Gsię ręzywała mował moa cofi i zaje
 - initial run was done on CPU at around `940 ms/step`
 - continuing with `--device mps` reduced step time to around `380-400 ms/step`, but it crashed after sampling
 
-```
 ## 20k steps checkpoint
 
 ```
-
 uv run python makemore/makemore.py \
   -i data/poem/pan_tadeusz_clean.txt \
   -o out/pan-tadeusz-small \
@@ -196,7 +194,6 @@ uv run python makemore/makemore.py \
   --max-steps 10000 \
   --device cpu \
   --resume
-
 ```
 
 ## 20k sample
@@ -230,7 +227,6 @@ Pozaję zamie, strasło leci nie uzdzina,
 I wojsk rzecz imentu, trwawią ukras hwiaty».
 
 ```
-
 
 ## development
 
