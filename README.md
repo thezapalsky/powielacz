@@ -146,7 +146,7 @@ The model is a small transformer trained on the text of the poem, including punc
 
 At this scale, the model does not generate coherent literary text, but it already learns Polish-looking character patterns, punctuation, line breaks, and pseudo-archaic rhythm.
 
-## params
+### params
 
 ```bash
 uv run python makemore/makemore.py \
@@ -161,7 +161,7 @@ uv run python makemore/makemore.py \
   --max-steps 10000
 ```
 
-## sample
+### sample
 
 ```
 Kto zorawania, rozwany zrokoszą chcestą
@@ -179,7 +179,7 @@ Gsię ręzywała mował moa cofi i zaje
 - initial run was done on CPU at around `940 ms/step`
 - continuing with `--device mps` reduced step time to around `380-400 ms/step`, but it crashed after sampling
 
-## 20k steps checkpoint
+### 20k steps checkpoint
 
 ```
 uv run python makemore/makemore.py \
@@ -196,10 +196,9 @@ uv run python makemore/makemore.py \
   --resume
 ```
 
-## 20k sample
+### 20k sample
 
 ```
-
 Trzecimen poburze światnym przyto bedwał,
 *Tane ale obrzęciem, wawodził hancieszej oboga
 Zakończych o dża trafic obuny nieśniote.
@@ -225,8 +224,49 @@ I żebyli i weskali w dosta mowania,
 I wpadłszym możny: «To obraz dziwnie zbóg!»
 Pozaję zamie, strasło leci nie uzdzina,
 I wojsk rzecz imentu, trwawią ukras hwiaty».
+```
+
+### medium-sized model
+
+1.08M params, best test ~1.940 at 7k, then overfits hard, scheduled with 30k, stopped at 20k
 
 ```
+uv run python makemore/makemore.py \
+  -i data/poem/pan_tadeusz_clean.txt \
+  -o out/pan-tadeusz-medium-plus-b16 \
+  --type transformer \
+  --n-layer 5 \
+  --n-head 4 \
+  --n-embd 128 \
+  --batch-size 16 \
+  --learning-rate 3e-4 \
+  --max-steps 30000 \
+  --device cpu
+```
+
+- best test loss: ~1.940 at around step 7,000
+
+```
+Że Soplicico myściąć na nas była wierzczy.
+DąMę i dlach lokowę, a azd niebuzone,
+Dować nad mówicy! Ale by wuch się się tarzyny
+Czas nie zapał Moskiewku! Tak się mnie, klewe:
+Łamięcę obrone i słyszał obmała i dstąca,
+W księżach był wiek poźnej na wiech żarter Niekłylie
+Białając Horeszkowów Wóźci zabarski tych promowa!
+Pan Tu z nim zamierał na miałość nie zmoce!
+Przypasu bawy u łysza tu Bogatku, o buśmi!
+Biga wyby zrokówniem za cyliła dzaryć dojem».
+U police sam posami zgami przytomarsku:
+I o mocna u za kolanne mam wielkim zaranki:
+Cóż znajca mówci na wne Scywa rudowiano
+Tak przykuczne jest i ba i drogę polaćłki,
+I więc się od odekłszystwaj, rapier gaś mzałał:
+Biała był jużbik ten rażny partebonkę;
+```
+
+- best test loss, still worse than smaller sized transformer: bigger is not always better
+- smaller batch_size improved the step latency, but the model generalizes worse and quickly overfits
 
 ## development
 
